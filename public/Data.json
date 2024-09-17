@@ -1,0 +1,80 @@
+[
+    {
+      "bookId": 1,
+      "bookName": "The Night Circus",
+      "author": "Erin Morgenstern",
+      "image": "./img/p-1.png",
+      "review": "A magical and enchanting tale of a circus that only opens at night.",
+      "totalPages": 387,
+      "rating": 4.3,
+      "category": "Fantasy",
+      "tags": ["Magic", "Romance", "Adventure"],
+      "publisher": "Doubleday",
+      "yearOfPublishing": 2011
+    },
+    {
+      "bookId": 2,
+      "bookName": "Circe",
+      "author": "Madeline Miller",
+      "image": "./img/p-2.png",
+      "review": "A beautifully written retelling of the story of Circe, the powerful enchantress from Greek mythology.",
+      "totalPages": 393,
+      "rating": 4.6,
+      "category": "Mythology",
+      "tags": ["Greek Mythology", "Fantasy", "Feminism"],
+      "publisher": "Little, Brown and Company",
+      "yearOfPublishing": 2018
+    },
+    {
+      "bookId": 3,
+      "bookName": "The Goldfinch",
+      "author": "Donna Tartt",
+      "image": "./img/p-3.png",
+      "review": "An epic tale of loss and survival centering on a young boy's connection to a priceless painting.",
+      "totalPages": 771,
+      "rating": 4.0,
+      "category": "Fiction",
+      "tags": ["Art", "Drama", "Thriller"],
+      "publisher": "Little, Brown and Company",
+      "yearOfPublishing": 2013
+    },
+    {
+      "bookId": 4,
+      "bookName": "The Testaments",
+      "author": "Margaret Atwood",
+      "image": "./img/p-4.png",
+      "review": "A gripping sequel to 'The Handmaid's Tale,' offering new perspectives on the dystopian society of Gilead.",
+      "totalPages": 419,
+      "rating": 4.4,
+      "category": "Dystopian",
+      "tags": ["Feminism", "Politics", "Dystopia"],
+      "publisher": "Nan A. Talese",
+      "yearOfPublishing": 2019
+    },
+    {
+      "bookId": 5,
+      "bookName": "The Martian",
+      "author": "Andy Weir",
+      "image": "./img/p-5.png",
+      "review": "A thrilling science fiction novel about an astronaut stranded on Mars and his struggle for survival.",
+      "totalPages": 369,
+      "rating": 4.7,
+      "category": "Science Fiction",
+      "tags": ["Survival", "Sci-Fi", "Adventure"],
+      "publisher": "Crown Publishing Group",
+      "yearOfPublishing": 2014
+    },
+    {
+      "bookId": 6,
+      "bookName": "./img/p-6.png",
+      "author": "Madeline Miller",
+      "image": "https://example.com/the-song-of-achilles.jpg",
+      "review": "A heart-wrenching retelling of the Iliad from the perspective of Achilles and his companion Patroclus.",
+      "totalPages": 378,
+      "rating": 4.5,
+      "category": "Mythology",
+      "tags": ["Greek Mythology", "Romance", "War"],
+      "publisher": "Ecco",
+      "yearOfPublishing": 2011
+    }
+  ]
