@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 
 const Navbar = () => {
@@ -39,24 +39,24 @@ const Navbar = () => {
               >Contact Us</NavLink>
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">Book Vibe</a>
+          <Link to='/' className="  text-2xl font-bold">Book Vibe</Link>
         </div>
         <div className="navbar-center hidden lg:flex ">
           <ul className="menu menu-horizontal p-2 gap-8 hover:border-1 border-sky-500">
             <NavLink to='/'
-            className={({isActive})=> isActive? 'text-[#23BE0A] border border-[#23BE0A] p-2 rounded-md':'p-2'}
+            className={({isActive})=> isActive? 'text-[#23BE0A] font-bold border border-[#23BE0A] p-2 rounded-md':'p-2'}
             >Home</NavLink>
             <NavLink to='/listedbooks'
-             className={({isActive})=> isActive? 'text-[#23BE0A] border border-[#23BE0A] p-2 rounded-md':'p-2'}
+             className={({isActive})=> isActive? 'text-[#23BE0A] font-bold border border-[#23BE0A] p-2 rounded-md':'p-2'}
             >Listed Books</NavLink>
             <NavLink to='/pagestoread'
-             className={({isActive})=> isActive? 'text-[#23BE0A] border border-[#23BE0A] p-2 rounded-md':'p-2'}
+             className={({isActive})=> isActive? 'text-[#23BE0A] font-bold border border-[#23BE0A] p-2 rounded-md':'p-2'}
             >Pages to Read</NavLink>
             <NavLink to='/about'
-             className={({isActive})=> isActive? 'text-[#23BE0A] border border-[#23BE0A] p-2 rounded-md':'p-2'}
+             className={({isActive})=> isActive? 'text-[#23BE0A] font-bold border border-[#23BE0A] p-2 rounded-md':'p-2'}
             >About us</NavLink>
             <NavLink to='/contact'
-             className={({isActive})=> isActive? 'text-[#23BE0A] border border-[#23BE0A] p-2 rounded-md':'p-2'}
+             className={({isActive})=> isActive? 'text-[#23BE0A] font-bold border border-[#23BE0A] p-2 rounded-md':'p-2'}
             >Contact Us</NavLink>
           </ul>
         </div>

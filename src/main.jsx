@@ -11,12 +11,14 @@ import PagesToRead from './Pages/PagesToRead/PagesToRead';
 import MainLayout from './Layouts/MainLayout';
 import AboutUs from './Pages/AboutUs/AboutUs';
 import Contact from './Pages/Contact/Contact';
+import Error from './Components/Error/Error';
 
 
 const router = createBrowserRouter([
 
     { path: "/",
       element: <MainLayout></MainLayout>,
+      errorElement:<Error></Error>,
       children:[
         {
           path: "/",
@@ -25,6 +27,7 @@ const router = createBrowserRouter([
         {
           path: "/listedbooks",
           element: <ListedBooks></ListedBooks>,
+
         },
         {
           path: "/pagestoread",
