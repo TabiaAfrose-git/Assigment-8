@@ -13,6 +13,8 @@ import AboutUs from './Pages/AboutUs/AboutUs';
 import Contact from './Pages/Contact/Contact';
 import Error from './Components/Error/Error';
 import BookDetails from './Components/BookDetails/BookDetails';
+import WishlistBooks from './Components/WishlistBooks/WishlistBooks';
+import ReadBooks from './Components/ReadBooks/ReadBooks';
 
 
 const router = createBrowserRouter([
@@ -45,7 +47,21 @@ const router = createBrowserRouter([
         {
           path:"/book/:id",
           element:<BookDetails></BookDetails>,
-          loader: ()=> fetch('../public/Data.json')
+          loader: ()=> fetch('../public/Data.json'),
+          children:[
+            {
+              index: true,
+              element:<ReadBooks></ReadBooks>,
+              loader: ()=>fetch('../public/Data.json')
+
+            },
+            {
+              path:'wishlist',
+              element:<WishlistBooks></WishlistBooks>,
+              loader: ()=> fetch('../public/Data.json'),
+            }
+          ]
+
         }
 
 
