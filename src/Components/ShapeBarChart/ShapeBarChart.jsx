@@ -1,19 +1,20 @@
 
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from 'recharts';
-const colors = ['#0088FE', '#00C49F', '#FFBB28'];
+const colors = ['#0088FE', '#FFBB28','#00C49F'];
 const data = [
     {
         bookName: "The Night Circus",
         totalPages: 387,
     },
     {
-        bookName: "TCirce",
-        totalPages: 393,
-    },
-    {
         bookName: "The Goldfinch",
         totalPages: 771,
     },
+    {
+        bookName: "The Testaments",
+        totalPages: 419,
+    }
+
 ]
 const getPath = (x, y, width, height) => {
     return `M${x},${y + height}C${x + width / 3},${y + height} ${x + width / 2},${y + height / 3}
