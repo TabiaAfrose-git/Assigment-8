@@ -1,5 +1,5 @@
 import { useLoaderData, useParams } from "react-router-dom";
-import { saveReadBooks } from "../../Utility/localstorage";
+import { saveReadBooks,saveWishList } from "../../Utility/localstorage";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -11,9 +11,13 @@ const BookDetails = () => {
     const book =  books.find(book =>(book.bookId === Int_id))
     const {image,bookName,tags,author,category,rating,review,totalPages,publisher,yearOfPublishing} = book;
 
-    const  handelReadBooks =()=>{
+    const handelReadBooks =()=>{
       saveReadBooks(Int_id);
       toast("You already read this book.")
+    }
+    const handelWishlist = ()=>{
+      saveWishList(Int_id);
+      toast("You already add this book in wishlist.")
     }
     return (
 <div className="hero min-h-[100vh-70px]">
@@ -60,7 +64,7 @@ const BookDetails = () => {
             </tbody>
         </table>
     <button onClick={handelReadBooks} className="btn bg-white text-black my-5 m-4 px-6 border border-slate-400">Read</button>
-      <button className="btn bg-[#59C6D2] text-white my-5">Wishlist</button>
+      <button onClick={handelWishlist} className="btn bg-[#59C6D2] text-white my-5">Wishlist</button>
     </div>
   </div>
   <ToastContainer />
