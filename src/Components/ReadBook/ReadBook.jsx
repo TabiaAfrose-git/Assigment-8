@@ -1,15 +1,14 @@
 
 import PropTypes from 'prop-types';
-import { IoLocationSharp } from "react-icons/io5";
-import { AiFillDollarCircle } from "react-icons/ai";
 import { CiLocationOn } from "react-icons/ci";
 import { IoPeopleOutline } from "react-icons/io5";
 import { FaBook } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 const ReadBook = ({readBook}) => {
     return (
         <div className="card card-side  p-4 border-2 m-4">
-            <figure className='w-44 h-44  mx-4 m-auto rounded-xl'>
+            <figure className='w-44 h-44 mx-4 m-auto rounded-xl'>
             <img
                 src={readBook.image}
                 alt="Movie" />
@@ -34,7 +33,7 @@ const ReadBook = ({readBook}) => {
                             </div>
 
                         </div>
-                        <div className='flex gap-2 items-center my-4'>
+                        <div className='flex gap-3 items-center my-4'>
                             <div className='flex gap-1 items-center'>
                                 <IoPeopleOutline></IoPeopleOutline>
                                 <small>Publisher: {readBook.publisher}</small>
@@ -48,7 +47,10 @@ const ReadBook = ({readBook}) => {
                         <div className='flex gap-2 items-center mt-4'>
                                 <p className='text-blue-500 bg-blue-50 p-3 rounded-lg text-center rounded-full'>Category: {readBook.category}</p>
                                 <p className='text-yellow-500 bg-yellow-50 p-3 rounded-lg text-center rounded-full'>Rating: {readBook.rating}</p>
-                                <p className='text-white bg-[#23BE0A] p-3 rounded-lg text-center rounded-full'>View Details</p>
+                                <Link to = {`/book/${readBook.bookId}`}>
+                                    <p className='text-white bg-[#23BE0A] p-3 rounded-lg text-center rounded-full'>View Details</p>
+                                </Link>
+
 
                         </div>
 

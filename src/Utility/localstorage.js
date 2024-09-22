@@ -25,12 +25,11 @@ const saveReadBooks = id => {
  }
 }
 const saveWishList = id => {
-    const storeReadBooks = getReadBooks();
     const storeWishList = getWishListBooks();
-    const existsReadBooks = storeReadBooks.find(bookId => (bookId === id));
-    if((!existsReadBooks)){
+    const exists = storeWishList.find(bookId => bookId === id);
+    if((!exists)){
         storeWishList.push(id);
-        localStorage.setItem('wishlist-books', JSON.stringify(storeReadBooks))
+        localStorage.setItem('wishlist-books', JSON.stringify(storeWishList))
     }
 }
 export{getReadBooks,saveReadBooks,getWishListBooks,saveWishList}
