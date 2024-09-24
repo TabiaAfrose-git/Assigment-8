@@ -17,7 +17,7 @@ const ReadBooks = () => {
             const readBookList = books.filter(book => books_ids.includes(book.bookId))
             setReadBooks(readBookList);
         }
-    },[])
+    },[books])
 
 
     return (
@@ -32,7 +32,6 @@ const ReadBooks = () => {
                     </ReadBook>)
                 }
             </div>
-
 
         </div>
     );

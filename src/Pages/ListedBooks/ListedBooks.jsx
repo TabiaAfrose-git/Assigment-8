@@ -1,11 +1,9 @@
 import { useState } from "react";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useLoaderData, useParams } from "react-router-dom";
+
 
 const ListedBooks = () => {
-
     const [tabIndex, setTabIndex] = useState(0);
-
-
     return (
         <div>
             <h1 className="text-3xl mx-4 font-bold p-6 bg-base-200 my-6 flex items-center justify-center rounded-lg">Books</h1>
@@ -15,7 +13,7 @@ const ListedBooks = () => {
                 <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
                     <li><a>Rating</a></li>
                     <li><a>Number of Pages</a></li>
-                    <li><a>Published Year</a></li>
+                    <li><a></a></li>
                 </ul>
                 </div>
             </div>

@@ -4,28 +4,30 @@ import { getWishListBooks } from "../../Utility/localstorage";
 import ReadBook from "../ReadBook/ReadBook";
 
 const WishlistBooks = () => {
-    const books = useLoaderData();
+    const data = useLoaderData();
     const [wishListBooks, setWishListBooks] = useState([]);
     useEffect(()=>{
         const wishList_ids = getWishListBooks();
-        console.log(wishList_ids);
-        if(books.length > 0){
-            const storeWishList = books.filter(book => wishList_ids.includes(book.bookId))
+        // console.log(books_ids);
+        if(data.length > 0){
+            const storeWishList = data.filter(book => (wishList_ids.includes(book.bookId)))
             setWishListBooks(storeWishList);
         }
-    },[])
+    },[data])
     return (
         <div>
             <h1>Wishlist Books...</h1>
-            {
-              wishListBooks.map(readBook =>
-              <ReadBook
-                    key = {readBook.bookId}
-                    readBook = {readBook}>
+            <div className='sm:w-full'>
+                {
+                wishListBooks.map(readBook =>
+                <ReadBook
+                        key = {readBook.bookId}
+                        readBook = {readBook}>
                 </ReadBook>)
-            }
-
+                }
+            </div>
         </div>
+
     );
 };
 
