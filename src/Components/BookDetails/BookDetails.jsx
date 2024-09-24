@@ -9,6 +9,7 @@ const BookDetails = () => {
     //console.log(id);
     const Int_id = parseInt(id);
     const book =  books.find(book =>book.bookId === Int_id)
+    console.log(book);
     const {image,bookName,tags,author,category,rating,review,totalPages,publisher,yearOfPublishing} = book;
 
     const handelReadBooks =()=>{
