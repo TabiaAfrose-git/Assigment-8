@@ -23,13 +23,16 @@ const ReadBooks = () => {
     return (
         <div>
             <h1>ReadBooks...</h1>
-            {
-              readBooks.map(readBook =>
-              <ReadBook
-                    key = {readBook.bookId}
-                    readBook = {readBook}>
-            </ReadBook>)
-            }
+            <div className='sm:w-full'>
+                {
+                    readBooks.map(readBook =>
+                    <ReadBook
+                            key = {readBook.bookId}
+                            readBook = {readBook}>
+                    </ReadBook>)
+                }
+            </div>
+
 
         </div>
     );
