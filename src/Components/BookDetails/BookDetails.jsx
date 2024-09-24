@@ -13,15 +13,15 @@ const BookDetails = () => {
 
     const handelReadBooks =()=>{
       if(saveReadBooks(Int_id)){
-        toast("Add this in ReadBooksList")
+        toast("Books Added to Read List")
       }
-      toast.error("You alreay add")
+      else toast.error("You have Already Read this Book!")
     }
     const handelWishlist = ()=>{
       if(saveWishList(Int_id)){
-        toast("Add this in WishList ")
+        toast("Books Added to Wish List")
       }
-      else toast.error("You can't add")
+      else toast.error("You have Already Read this Book!")
     }
     return (
 <div className="hero min-h-[100vh-70px]">

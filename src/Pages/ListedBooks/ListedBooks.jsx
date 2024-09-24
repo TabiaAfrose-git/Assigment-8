@@ -1,9 +1,11 @@
-import { useEffect, useState } from "react";
-import { Link, Outlet, useLoaderData, useParams } from "react-router-dom";
-import { getReadBooks } from "../../Utility/localstorage";
+import { useState } from "react";
+import { Link, Outlet } from "react-router-dom";
 
 const ListedBooks = () => {
+
     const [tabIndex, setTabIndex] = useState(0);
+
+
     return (
         <div>
             <h1 className="text-3xl mx-4 font-bold p-6 bg-base-200 my-6 flex items-center justify-center rounded-lg">Books</h1>
@@ -11,9 +13,9 @@ const ListedBooks = () => {
                 <div className="dropdown dropdown-bottom">
                 <div tabIndex={0} role="button" className="btn m-1 bg-[#23BE0A] text-white">Sort By</div>
                 <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
-                    <li><a>Item 1</a></li>
-                    <li><a>Item 2</a></li>
-                    <li><a>Item 3</a></li>
+                    <li><a>Rating</a></li>
+                    <li><a>Number of Pages</a></li>
+                    <li><a>Published Year</a></li>
                 </ul>
                 </div>
             </div>
