@@ -39,6 +39,7 @@ const ShapeBarChart = () => {
         left: 20,
         bottom: 5,
       }}
+      className='sm: w-11/12'
     >
       <CartesianGrid strokeDasharray="3 3" />
       <XAxis dataKey="bookName" />
