@@ -12,12 +12,16 @@ const BookDetails = () => {
     const {image,bookName,tags,author,category,rating,review,totalPages,publisher,yearOfPublishing} = book;
 
     const handelReadBooks =()=>{
-      saveReadBooks(Int_id);
-      toast("You already read this book.")
+      if(saveReadBooks(Int_id)){
+        toast("Add this in ReadBooksList")
+      }
+      toast.error("You alreay add")
     }
     const handelWishlist = ()=>{
-      saveWishList(Int_id);
-      toast("You already add this book in wishlist.")
+      if(saveWishList(Int_id)){
+        toast("Add this in WishList ")
+      }
+      else toast.error("You can't add")
     }
     return (
 <div className="hero min-h-[100vh-70px]">
